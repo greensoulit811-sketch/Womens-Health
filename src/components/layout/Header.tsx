@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ShoppingBag, Menu, X, Search, User, Globe } from 'lucide-react';
+import { ShoppingBag, Menu, X, User, Globe } from 'lucide-react';
 import { useCart } from '@/contexts/CartContext';
 import { useSiteSettings } from '@/contexts/SiteSettingsContext';
 import { useStoreSettings } from '@/hooks/useStoreSettings';
@@ -113,7 +113,6 @@ export function Header() {
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               className="hidden sm:flex"
             >
-              <Search className="h-6 w-6" />
               <span className="sr-only">{t('common.search')}</span>
             </Button>
 
@@ -156,22 +155,7 @@ export function Header() {
             </Link>
           </div>
         </div>
-
-        {/* Search bar */}
-        {isSearchOpen && (
-          <div className="py-4 border-t border-border animate-fade-in">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              <input
-                type="search"
-                placeholder={t('nav.searchProducts')}
-                className="input-shop pl-10"
-                autoFocus
-              />
-            </div>
-          </div>
-        )}
-      </div>
+        </div>
     </header>
   );
 }
