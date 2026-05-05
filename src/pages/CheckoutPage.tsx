@@ -448,7 +448,7 @@ export default function CheckoutPage() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="btn-accent w-full"
+                  className="btn-accent w-full font-bold"
                   disabled={createOrder.isPending}
                 >
                   {createOrder.isPending ? t('checkout.processing') : t('checkout.placeOrder')}
