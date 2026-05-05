@@ -425,17 +425,7 @@ export default function ProductDetailsPage() {
               <div className="hidden md:flex flex-col gap-3">
                 <Button
                   size="lg"
-                  variant="outline"
-                  className="w-full h-12 rounded-lg font-medium text-sm border-border hover:border-primary hover:bg-primary/5 transition-all gap-2"
-                  onClick={handleAddToCart}
-                  disabled={isAddingToCart || effectiveStock === 0 || (hasVariants && !selectedVariant)}
-                >
-                  {isAddingToCart && <Loader2 className="h-5 w-5 animate-spin" />}
-                  {t('product.addToCart')}
-                </Button>
-                <Button
-                  size="lg"
-                  className="btn-accent w-full h-12 rounded-lg font-semibold text-sm shadow-sm hover:shadow-md transition-all gap-2"
+                  className="btn-accent w-full h-12 rounded-lg font-bold text-sm shadow-sm hover:shadow-md transition-all gap-2"
                   onClick={handleBuyNow}
                   disabled={isBuyingNow || effectiveStock === 0 || (hasVariants && !selectedVariant)}
                 >
@@ -568,17 +558,7 @@ export default function ProductDetailsPage() {
         <div className="fixed bottom-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-t border-border p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] md:hidden">
           <div className="flex flex-col gap-2 max-w-7xl mx-auto">
             <Button
-              variant="outline"
-              className="w-full h-11 text-sm font-medium rounded-lg border-border hover:border-primary gap-2"
-              onClick={handleAddToCart}
-              disabled={isAddingToCart || effectiveStock === 0 || (hasVariants && !selectedVariant)}
-              aria-label={t('product.addToCart')}
-            >
-              {isAddingToCart && <Loader2 className="h-5 w-5 animate-spin" />}
-              {t('product.addToCart')}
-            </Button>
-            <Button
-              className="btn-accent w-full h-11 text-sm font-semibold rounded-lg shadow-sm gap-2"
+              className="btn-accent w-full h-11 text-sm font-bold rounded-lg shadow-sm gap-2"
               onClick={handleBuyNow}
               disabled={isBuyingNow || effectiveStock === 0 || (hasVariants && !selectedVariant)}
               aria-label={t('product.buyNow')}

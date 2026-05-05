@@ -1189,17 +1189,6 @@ export default function AdminSettings() {
                           >
                             Buy Now
                           </button>
-                          <button
-                            className="px-3 py-1.5 text-xs font-medium"
-                            style={{
-                              border: `1px solid ${formData.brand_border}`,
-                              borderRadius: `${formData.brand_radius}rem`,
-                              color: formData.brand_foreground,
-                              backgroundColor: formData.brand_background,
-                            }}
-                          >
-                            Add to Cart
-                          </button>
                         </div>
                       </div>
                     </div>

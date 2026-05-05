@@ -156,19 +156,8 @@ export function ProductCard({ product }: ProductCardProps) {
       {/* Action Buttons */}
       <div className="px-3 pb-3 mt-auto flex flex-col gap-1.5 sm:px-4 sm:pb-4 sm:gap-2">
         <Button
-          variant="outline"
           size="sm"
-          className="w-full h-8 sm:h-10 text-xs sm:text-sm font-medium rounded-lg border-border hover:border-primary hover:bg-primary/5 transition-all gap-1.5 sm:gap-2"
-          onClick={handleAddToCart}
-          disabled={isAddingToCart || product.stock === 0}
-          aria-label={product.has_variants ? 'অপশন দেখুন' : t('product.addToCart')}
-        >
-          {isAddingToCart && <Loader2 className="h-3.5 w-3.5 sm:h-4 sm:w-4 animate-spin" />}
-          {product.has_variants ? 'অপশন দেখুন' : t('product.addToCart')}
-        </Button>
-        <Button
-          size="sm"
-          className="btn-accent w-full h-8 sm:h-10 text-xs sm:text-sm font-semibold rounded-lg shadow-sm hover:shadow-md transition-all gap-1.5 sm:gap-2"
+          className="btn-accent w-full h-8 sm:h-10 text-xs sm:text-sm font-bold rounded-lg shadow-sm hover:shadow-md transition-all gap-1.5 sm:gap-2"
           onClick={handleBuyNow}
           disabled={isBuyingNow || product.stock === 0}
           aria-label={t('product.buyNow')}
